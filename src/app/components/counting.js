@@ -53,11 +53,13 @@ export default function Counting() {
               className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-2 sm:mb-4"
               style={{
                 color: "#fff",
-                textShadow: `
-                  1px 1px 0 #9cbcb8, 
-                  2px 2px 2px rgba(156, 188, 184, 0.4),
-                  4px 4px 6px rgba(0, 0, 0, 0.6)
-                `,
+                 textShadow: `
+    0 0 2px #7ae1d6,
+    0 0 5px #7ae1d6,
+    0 0 10px #3ba99b,
+    0 0 20px #3ba99b,
+    0 0 30px rgba(58,169,155,0.7)
+  `,
               }}
             >
               {counts[index]}

@@ -12,28 +12,28 @@ export default function PopularCourses() {
     {
       title: "Front End Development",
       subtitle: "HTML, CSS, JavaScript, Bootstrap, Tailwind",
-      image: "https://images.unsplash.com/photo-1699885960867-56d5f5262d38?crop=faces,edges&h=630&w=1200&auto=format&fit=crop&q=60",
+      image: "https://img.icons8.com/?size=100&id=122637&format=png&color=FFFFFF",
       buttonText: "View More Courses",
       buttonLink: "/courses",
     },
     {
       title: "Back End Development",
       subtitle: "HTML, CSS, JavaScript, Bootstrap, MySQL, PHP",
-      image: "https://thumbs.dreamstime.com/b/programming-coding-source-code-screen-abstract-software-developer-computer-script-47515427.jpg",
+      image: "https://img.icons8.com/?size=100&id=21893&format=png&color=FFFFFF",
     buttonText: "View More Courses",
       buttonLink: "/courses",
     },
     {
       title: "Art Work 2.0",
       subtitle: "Canva, Photoshop, Illustrator, CH Animation, Figma",
-      image: "https://hapgrows.com/wp-content/uploads/2024/08/Add-a-heading-e1728302884648.png",
+      image: "https://img.icons8.com/?size=100&id=CR3Gf0kpN6JQ&format=png&color=FFFFFF",
       buttonText: "View More Courses",
       buttonLink: "/courses",
     },
     {
       title: "ACIT Vol 2.1",
       subtitle: "MS Office, PPT, Networking, Canva, Photoshop, Illustrator, AI Tools, HTML, CSS, JavaScript, Bootstrap, Tailwind",
-      image: "https://mir-s3-cdn-cf.behance.net/projects/404/09934438664589.Y3JvcCw3MDEsNTQ4LDE2MSwxMDc.jpg",
+      image: "https://img.icons8.com/?size=100&id=JgERB2cdmWYp&format=png&color=FFFFFF",
       buttonText: "View More Courses",
       buttonLink: "/courses",
     },
@@ -45,11 +45,13 @@ export default function PopularCourses() {
       <h2
         className={`${signika.className} text-3xl sm:text-4xl md:text-5xl font-bold mb-8 text-white text-center `}
         style={{
-          textShadow: `
-            1px 1px 0 #9cbcb8,
-            2px 2px 2px rgba(156, 188, 184, 0.4),
-            4px 4px 6px rgba(0, 0, 0, 0.6)
-          `,
+           textShadow: `
+    0 0 2px #7ae1d6,
+    0 0 5px #7ae1d6,
+    0 0 10px #3ba99b,
+    0 0 20px #3ba99b,
+    0 0 30px rgba(58,169,155,0.7)
+  `,
         }}
       >
         Popular Courses

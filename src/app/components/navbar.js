@@ -21,19 +21,47 @@ export default function Navbar() {
 
   return (
     <nav className="relative w-full z-50 h-[70px] flex items-center justify-between px-4 md:px-8 transition-all bg-transparent">
-      {/* Logo */}
+      {/* Logo / Desktop Text */}
       <Link href="/" className="flex items-center h-full">
-        <Image
-          src="/Logo No Bg.png"
-          alt="Logo"
-          width={120}
-          height={63}
-          className="h-[90%] w-auto object-contain"
-        />
+        {/* Desktop Text */}
+        <div className="hidden md:flex flex-col">
+          <span
+            className={`${signika.className} text-white text-2xl font-bold`} // increased text size
+            style={{
+              textShadow: `
+                0 0 2px #7ae1d6,
+                0 0 5px #7ae1d6,
+                0 0 10px #3ba99b,
+                0 0 20px #3ba99b,
+                0 0 30px rgba(58,169,155,0.7)
+              `,
+            }}
+          >
+            Achievers Corner
+          </span>
+          <span
+            className={`${signika.className} text-white text-base font-medium`} // slightly larger
+          >
+            House of Technology
+          </span>
+        </div>
+
+        {/* Mobile Image */}
+        <div className="md:hidden">
+          <Image
+            src="/Logo No Bg.png"
+            alt="Logo"
+            width={120} // intrinsic width
+            height={63} // intrinsic height
+            className="h-[60px] w-auto object-contain filter brightness-0 invert" // white filter
+          />
+        </div>
       </Link>
 
       {/* Desktop Menu */}
-      <div className={`hidden md:flex gap-6 font-medium text-white h-full items-center ${signika.className}`}>
+      <div
+        className={`hidden md:flex gap-6 font-medium text-white h-full items-center ${signika.className}`}
+      >
         {navItems.map((item) => (
           <Link
             key={item.name}
@@ -70,15 +98,13 @@ export default function Navbar() {
       {/* Mobile Menu */}
       <div
         className={`md:hidden absolute top-full left-0 w-full overflow-hidden transition-all duration-300 ${
-          isOpen
-            ? "max-h-60 opacity-100"
-            : "max-h-0 opacity-0"
+          isOpen ? "max-h-60 opacity-100" : "max-h-0 opacity-0"
         }`}
         style={{
           backgroundColor: "rgba(255, 255, 255, 0.5)",
           backdropFilter: "blur(10px)",
-          position: "fixed", // mobile menu sticky
-          top: "70px", // below navbar
+          position: "fixed",
+          top: "70px",
         }}
       >
         <div className={`flex flex-col p-4 gap-4 text-white ${signika.className}`}>
