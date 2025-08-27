@@ -65,10 +65,6 @@ export default function CoursesPage() {
   className={`${signika.className} text-4xl sm:text-5xl md:text-6xl font-bold mt-12 mb-8 text-white text-center`}
   style={{
     textShadow: `
-      0 0 2px #7ae1d6,
-      0 0 5px #7ae1d6,
-      0 0 10px #3ba99b,
-      0 0 20px #3ba99b,
       0 0 30px rgba(58,169,155,0.7)
     `,
   }}

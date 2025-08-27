@@ -47,10 +47,6 @@ export default function ContactPage() {
               className={`${signika.className} text-5xl sm:text-6xl md:text-7xl`}
               style={{
                 textShadow: `
-                  0 0 2px #7ae1d6,
-                  0 0 5px #7ae1d6,
-                  0 0 10px #3ba99b,
-                  0 0 20px #3ba99b,
                   0 0 30px rgba(58,169,155,0.7)
                 `,
               }}
@@ -80,9 +76,6 @@ export default function ContactPage() {
               className={`${signika.className} text-3xl sm:text-4xl mb-6`}
               style={{
                 textShadow: `
-                  0 0 2px #7ae1d6,
-                  0 0 5px #7ae1d6,
-                  0 0 10px #3ba99b,
                   0 0 15px #3ba99b
                 `,
               }}

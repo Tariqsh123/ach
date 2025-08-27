@@ -10,25 +10,18 @@ const signika = Signika({
 
 export default function Footer() {
   return (
-    <footer className="bg-black text-white pt-12 pb-8 w-full border-t border-white">
+    <footer className="bg-black text-white pt-12 pb-8 w-full border-t border-gray-800">
       <div className="max-w-[1400px] w-[95%] mx-auto flex flex-col md:flex-row justify-between gap-10 md:gap-0 text-center md:text-left items-center md:items-start">
 
         {/* Left Section - Text + Socials */}
         <div className="flex flex-col items-center md:items-start gap-4">
-          {/* Footer Text Logo */}
           <div className="flex flex-col">
-            <span
-              className={`${signika.className} text-white text-2xl font-bold`}
-              style={{
-                textShadow: `
-                  0 0 2px #7ae1d6,
-                  0 0 5px #7ae1d6,
-                  0 0 10px #3ba99b,
-                  0 0 20px #3ba99b,
-                  0 0 30px rgba(58,169,155,0.7)
-                `,
-              }}
-            >
+              <span
+            className={`${signika.className} text-white text-2xl font-bold uppercase`}
+            style={{
+              textShadow: '0 0 5px #7ae1d6,0 0 5px darkcyan',
+            }}
+          >
               Achievers Corner
             </span>
             <span className={`${signika.className} text-white text-base font-medium`}>
@@ -36,8 +29,8 @@ export default function Footer() {
             </span>
           </div>
 
-          <p className="text-sm">Let's connect with our socials</p>
-          <div className="flex gap-3 text-white text-lg justify-center md:justify-start">
+          <p className="text-sm">Connect with us on socials</p>
+          <div className="flex gap-4 text-white text-lg justify-center md:justify-start">
             <a href="#" className="hover:text-[#7ae1d6] transition-colors"><FaInstagram /></a>
             <a href="#" className="hover:text-[#7ae1d6] transition-colors"><FaLinkedin /></a>
             <a href="#" className="hover:text-[#7ae1d6] transition-colors"><FaDiscord /></a>
@@ -48,19 +41,7 @@ export default function Footer() {
 
         {/* Quick Links Section */}
         <div className="flex flex-col gap-2 text-sm items-center md:items-start">
-          <h3
-            className={`${signika.className} font-bold text-white`}
-            style={{
-              textShadow: `
-                0 0 2px #7ae1d6,
-                0 0 5px #7ae1d6,
-                0 0 10px #3ba99b,
-                0 0 20px #3ba99b
-              `,
-            }}
-          >
-            Quick Links
-          </h3>
+          <h3 className={`${signika.className} font-bold text-white`}>Quick Links</h3>
           <a href="/" className="hover:text-[#7ae1d6] transition-colors">Home</a>
           <a href="/courses" className="hover:text-[#7ae1d6] transition-colors">Courses</a>
           <a href="/contact" className="hover:text-[#7ae1d6] transition-colors">Contact</a>
@@ -68,55 +49,33 @@ export default function Footer() {
 
         {/* Legal Section */}
         <div className="flex flex-col gap-2 text-sm items-center md:items-start">
-          <h3
-            className={`${signika.className} font-bold text-white`}
-            style={{
-              textShadow: `
-                0 0 2px #7ae1d6,
-                0 0 5px #7ae1d6,
-                0 0 10px #3ba99b,
-                0 0 20px #3ba99b
-              `,
-            }}
-          >
-            Legal
-          </h3>
+          <h3 className={`${signika.className} font-bold text-white`}>Legal</h3>
           <a href="#" className="hover:text-[#7ae1d6] transition-colors">Privacy Policy</a>
-          <a href="#" className="hover:text-[#7ae1d6] transition-colors">Terms and Conditions</a>
+          <a href="#" className="hover:text-[#7ae1d6] transition-colors">Terms & Conditions</a>
         </div>
 
         {/* Contact Section */}
         <div className="flex flex-col gap-2 text-sm items-center md:items-start">
-          <h3
-            className={`${signika.className} font-bold text-white`}
-            style={{
-              textShadow: `
-                0 0 2px #7ae1d6,
-                0 0 5px #7ae1d6,
-                0 0 10px #3ba99b,
-                0 0 20px #3ba99b
-              `,
-            }}
-          >
-            Get In Touch
-          </h3>
+          <h3 className={`${signika.className} font-bold text-white`}>Get In Touch</h3>
           <p className="flex items-center gap-2 justify-center md:justify-start">
-            <FaPhoneAlt className="text-white" /> <span className="font-semibold">+92 318 3609193</span>
+            <FaPhoneAlt className="text-[#7ae1d6]" /> <span className="font-semibold">+92 318 3609193</span>
           </p>
           <p className="flex items-center gap-2 justify-center md:justify-start">
-            <FaEnvelope className="text-white" /> <a href="mailto:awaismohammad395@gmail.com" className="hover:text-[#7ae1d6] transition-colors">awaismohammad395@gmail.com</a>
+            <FaEnvelope className="text-[#7ae1d6]" /> 
+            <a href="mailto:awaismohammad395@gmail.com" className="hover:text-[#7ae1d6] transition-colors">
+              awaismohammad395@gmail.com
+            </a>
           </p>
           <p className="flex items-center gap-2 justify-center md:justify-start">
-            <FaMapMarkerAlt className="text-white" /> Johar Chowk Market, Ghaziabad, Karachi, Pakistan
+            <FaMapMarkerAlt className="text-[#7ae1d6]" /> Johar Chowk Market, Ghaziabad, Karachi, Pakistan
           </p>
         </div>
 
       </div>
 
-      <div className="mt-12 w-[90%] mx-auto text-center text-[10px] md:text-sm border-t border-gray-700 pt-4">
-  Copyright © 2025 Achievers Pvt. Ltd. All Rights Reserved.
-</div>
-
+      <div className="mt-12 w-[90%] mx-auto text-center text-xs md:text-sm border-t border-gray-700 pt-4 text-gray-400">
+        © 2025 Achievers Pvt. Ltd. All Rights Reserved.
+      </div>
     </footer>
   );
 }

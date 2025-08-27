@@ -26,8 +26,23 @@ export default function HomeHeader() {
   }, []);
 
   return (
-    <header className="flex items-center justify-center min-h-[40vh] md:min-h-[60vh] px-6 text-center">
-      <div className="max-w-6xl">
+    <header className="relative flex items-center justify-center min-h-[40vh] md:min-h-[60vh] px-6 text-center overflow-hidden">
+      {/* Background Video */}
+      <video
+        autoPlay
+        loop
+        muted
+        playsInline
+        className="absolute top-0 left-0 w-full h-full object-cover -z-10"
+      >
+        <source src='/bg.mp4' type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+
+      {/* Dark Overlay */}
+      <div className="absolute inset-0 bg-black/50 -z-10"></div>
+
+      <div className="relative max-w-6xl z-10">
         {/* Animated Headings */}
         <h1
           className={`${signika.className} 
@@ -35,11 +50,11 @@ export default function HomeHeader() {
             text-white leading-tight [text-wrap:balance] mb-6 min-h-[1.4em] mx-auto max-w-xs sm:max-w-2xl`}
           style={{
             textShadow: `
+              0 0 1px #7ae1d6,
               0 0 2px #7ae1d6,
-              0 0 5px #7ae1d6,
-              0 0 10px #3ba99b,
-              0 0 20px #3ba99b,
-              0 0 30px rgba(58,169,155,0.7)
+              0 0 5px #3ba99b,
+              0 0 15px #3ba99b,
+              0 0 20px rgba(58,169,155,0.7)
             `,
           }}
         >
@@ -51,7 +66,7 @@ export default function HomeHeader() {
               exit={{ opacity: 0, y: 20 }}
               transition={{ duration: 0.8 }}
               className="block"
-              style={{ willChange: 'transform, opacity' }}
+              style={{ willChange: "transform, opacity" }}
             >
               {headings[index]}
             </motion.span>
@@ -59,16 +74,7 @@ export default function HomeHeader() {
         </h1>
 
         {/* Paragraph */}
-        <p
-          className="mt-4 text-xs sm:text-base md:text-lg xl:text-xl text-white font-light leading-relaxed"
-          style={{
-            textShadow: `
-              1px 1px 0 #9cbcb8, 
-              2px 2px 2px rgba(156, 188, 184, 0.4),
-              4px 4px 6px rgba(0, 0, 0, 0.6)
-            `,
-          }}
-        >
+        <p className="mt-4 text-xs sm:text-base md:text-lg xl:text-xl text-white font-light leading-relaxed">
           Learn from industry professionals and take your skills to the next
           level with courses designed to empower your growth.
         </p>
@@ -76,12 +82,13 @@ export default function HomeHeader() {
         {/* Button */}
         <div className="mt-6">
           <Link href="/courses" passHref>
-            <button style={{ '--clr': '#7ae1d6' }}>
+            <button style={{ "--clr": "#7ae1d6" }}>
               <span>View Courses</span>
               <i></i>
             </button>
           </Link>
 
+          {/* Button Styling */}
           <style jsx>{`
             button {
               position: relative;
@@ -155,15 +162,15 @@ export default function HomeHeader() {
             }
 
             button:hover {
-              color: #fff;
-              background: #000;
-              box-shadow: 
-                0 6px 10px rgba(0,0,0,0.9),
-                0 0 5px #7ae1d6,
-                0 0 10px #7ae1d6,
-                0 0 20px #3ba99b,
-                0 0 30px rgba(58,169,155,0.7);
-            }
+  color: #fff;
+  background: #000;
+  box-shadow: 
+    0 4px 6px rgba(0,0,0,0.8),
+    0 0 3px #7ae1d6,
+    0 0 6px #7ae1d6,
+    0 0 12px #3ba99b,
+    0 0 18px rgba(58,169,155,0.7);
+}
 
             @keyframes move {
               0% { transform: translateX(0); }
@@ -171,19 +178,18 @@ export default function HomeHeader() {
               100% { transform: translateX(0); }
             }
 
-            /* Mobile optimizations */
             @media (max-width: 768px) {
               h1 {
-                font-size: 3.5rem !important; /* bigger heading */
+                font-size: 3.5rem !important;
                 text-shadow:
                   0 0 2px #7ae1d6,
                   0 0 5px #7ae1d6;
               }
               p {
-                font-size: 0.875rem !important; /* smaller paragraph */
+                font-size: 0.875rem !important;
               }
               button {
-                font-size: x-small !important; /* smaller button text */
+                font-size: x-small !important;
                 padding: 8px 16px !important;
               }
               button i::before,

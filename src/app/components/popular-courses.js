@@ -30,29 +30,14 @@ export default function PopularCourses() {
       buttonText: "View More Courses",
       buttonLink: "/courses",
     },
-    {
-      title: "ACIT Vol 2.1",
-      subtitle: "MS Office, PPT, Networking, Canva, Photoshop, Illustrator, AI Tools, HTML, CSS, JavaScript, Bootstrap, Tailwind",
-      image: "https://img.icons8.com/?size=100&id=JgERB2cdmWYp&format=png&color=FFFFFF",
-      buttonText: "View More Courses",
-      buttonLink: "/courses",
-    },
+    
   ];
 
   return (
-    <section className="w-full px-4 py-8 sm:py-12 md:py-16">
+    <section className="w-full px-4 py-8 sm:py-12 md:py-4">
       {/* Heading */}
       <h2
         className={`${signika.className} text-3xl sm:text-4xl md:text-5xl font-bold mb-8 text-white text-center `}
-        style={{
-           textShadow: `
-    0 0 2px #7ae1d6,
-    0 0 5px #7ae1d6,
-    0 0 10px #3ba99b,
-    0 0 20px #3ba99b,
-    0 0 30px rgba(58,169,155,0.7)
-  `,
-        }}
       >
         Popular Courses
       </h2>

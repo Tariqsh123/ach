@@ -30,11 +30,7 @@ export default function CardCourse({
             className={`${signika.className} text-white text-2xl font-bold`}
             style={{
               textShadow: `
-                0 0 2px #7ae1d6,
-                0 0 5px #7ae1d6,
-                0 0 10px #3ba99b,
-                0 0 20px #3ba99b,
-                0 0 30px rgba(58,169,155,0.7)
+                0 0 10px darkcyan
               `,
             }}
           >
